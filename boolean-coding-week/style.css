@@ -1,0 +1,107 @@
+/* Custom properties */
+:root {
+    --font: Roboto, sans-serif;
+    --pink: #f71469
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Generic rules */
+html {
+    height: 100%;
+    font-family: var(--font);
+    color: white;
+    background-image: linear-gradient(to top, var(--pink) -40%, #3535ec 85%);
+    background-attachment: fixed;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Container */
+.container {
+    display: grid;
+    padding: 16px;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+/* Logo */
+header img {
+    margin-bottom: 32px;
+    height: auto;
+    width: 56px;
+}
+
+/* Text box */
+textarea {
+    border: none;
+    width: 100%;
+    resize: none;
+    height: 120px;
+    border-radius: 16px;
+    padding: 24px;
+    font-size: 20px;
+    font-family: var(--font);
+    margin-bottom: 32px;
+}
+
+textarea:focus-within {
+    outline: 1px auto var(--pink);
+}
+
+/* Controls */
+.controls {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* Play button */
+button {
+    border: none;
+    border-radius: 8px;
+    height: 56px;
+    width: 64px;
+    background-color: var(--pink);
+}
+
+button:disabled {
+    opacity: 0.6;
+    background-color: #dedede;
+  }
+
+button img {
+    vertical-align: middle;
+}
+
+/* Audio controls */
+label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.pitch-controls {
+    margin-bottom: 32px;
+}
+
+#pitch-range {
+    width: 100%;
+    accent-color: white;
+}
+
+/* # TALKING CLASS */
+
+.talking .static-duck {
+    display: none;
+}
+  
+.talking .animated-duck {
+    display: block;
+}
